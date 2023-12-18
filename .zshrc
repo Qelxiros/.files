@@ -7,6 +7,14 @@ plugins=(
     vi-mode
 )
 
+export ZSH="$HOME/.oh-my-zsh"
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+export PATH="$PATH:$HOME/.cargo/bin"
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
+export GPG_TTY=$(tty)
+export TERMINAL=kitty
+
 source $ZSH/oh-my-zsh.sh
 
 alias l='ls -lApv --group-directories-first --block-size=h --color=always'
@@ -25,10 +33,4 @@ fi
 
 dbus-update-activation-environment DISPLAY
 
-export ZSH="$HOME/.oh-my-zsh"
-export VISUAL=nvim
-export EDITOR="$VISUAL"
-export PATH="$PATH:$HOME/.cargo/bin"
-export CARGO_NET_GIT_FETCH_WITH_CLI=true
-export GPG_TTY=$(tty)
-export TERMINAL=kitty
+unsetopt autocd
