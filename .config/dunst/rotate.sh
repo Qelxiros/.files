@@ -1,4 +1,8 @@
 #!/bin/env sh
-TODAYS_FILE_NAME=`date --date="2 days ago" +/home/jeremy/.config/dunst/histfile.%Y-%m-%d`
-gpg --output $TODAYS_FILE_NAME.gpg --encrypt --recipient jeremy3141592@gmail.com $TODAYS_FILE_NAME && rm $TODAYS_FILE_NAME;
-scp /home/jeremy/.config/dunst/*.gpg freedom:~qel/notif-backups && rm /home/jeremy/.config/dunst/*.gpg
+for x in /home/jeremy/.config/dunst/histfile*; do
+    if [[ "$x" == $(date --date="today" +/home/jeremy/.config/dunst/histfile.%Y-%m-%d) || "$x" == $(date --date="yesterday" +/home/jeremy/.config/dunst/histfile.%Y-%m-%d) ]]; then
+        continue
+    fi
+    gpg --output $x.gpg --encrypt --recipient jeremy3141592@gmail.com $x && rm $x;
+    scp /home/jeremy/.config/dunst/*.gpg freedom:~qel/notif-backups && rm /home/jeremy/.config/dunst/*.gpg;
+done
