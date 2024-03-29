@@ -263,8 +263,11 @@ exec --no-startup-id blueman-applet &
 
 assign [class="^Slack$"] $ws9
 assign [class="^discord$"] $ws8
+assign [class="^thunderbird$"] $ws7
 exec --no-startup-id slack
 exec --no-startup-id /home/jeremy/.local/share/DiscordCanary/DiscordCanary
+exec --no-startup-id thunderbird
+exec --no-startup-id "i3-msg 'workspace 10; append_layout ~/.config/i3/workspace-10.json; exec blueman-manager; exec pavucontrol; exec arandr'"
 
 bindsym $mod+Shift+s exec --no-startup-id slack
 bindsym $mod+Shift+d exec --no-startup-id /home/jeremy/.local/share/DiscordCanary/DiscordCanary

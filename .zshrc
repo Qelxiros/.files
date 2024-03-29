@@ -18,16 +18,17 @@ export TERMINAL=kitty
 source $ZSH/oh-my-zsh.sh
 
 alias l='ls -lApv --group-directories-first --block-size=h --color=always'
-alias clr='clear && fastfetch' 
+alias clr='clear && fastfetch'
 alias ec='$EDITOR $HOME/.zshrc'
 alias sc='source $HOME/.zshrc'
 alias cat='bat'
 alias clip='xclip -selection clipboard'
-alias drip='echo "\\0x7"'
+alias drip='echo -n "\\0x7"'
 alias nano='nvim'
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias hibernate='systemctl hibernate; exit'
 alias cargon='cargo +nightly'
+alias fd='fd -u'
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
