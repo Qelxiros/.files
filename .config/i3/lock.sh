@@ -1,9 +1,9 @@
 #!/bin/sh
 dunstctl set-paused true
 if [ -f /home/jeremy/.config/i3/allow_passthrough ]; then
-    i3lock -u -n -i /home/jeremy/.config/i3/background.png --pass-media-keys --pass-screen-keys --pass-volume-keys
+    i3lock -u -n -c 00000000 -i /home/jeremy/.config/i3/background.png --pass-media-keys --pass-screen-keys --pass-volume-keys
 else
-    i3lock -u -n -i /home/jeremy/.config/i3/background.png
+    i3lock -u -n -c 00000000 -i /home/jeremy/.config/i3/background.png
 fi
 dunstctl set-paused false;
 /home/jeremy/.config/i3/volume_script.sh;
