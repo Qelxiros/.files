@@ -1,6 +1,0 @@
-[env]
-WINIT_X11_SCALE_FACTOR="1.0"
-[font]
-normal = { family = "MesloLGS NF", style = "Regular" }
-[colors.primary]
-background = "#303030"
