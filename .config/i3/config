@@ -23,9 +23,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/jeremy/.config/i3/l
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet &
 
-# Lock screen on <S-;>
-bindsym $mod+semicolon exec --no-startup-id touch /home/jeremy/.config/i3/allow_passthrough; exec --no-startup-id loginctl lock-session
-bindsym $mod+Shift+semicolon exec --no-startup-id rm /home/jeremy/.config/i3/allow_passthrough; exec --no-startup-id loginctl lock-session
+bindsym $mod+semicolon exec --no-startup-id rm /home/jeremy/.config/i3/transparent; exec --no-startup-id loginctl lock-session
+bindsym $mod+Shift+semicolon exec --no-startup-id touch /home/jeremy/.config/i3/transparent; exec --no-startup-id loginctl lock-session
 
 default_border pixel 0
 default_floating_border pixel 0
@@ -65,7 +64,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -226,11 +225,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "playlist" {
-    bindsym s exec --no-startup-id mpc clear && mpc load sadness && mpc shuffle && mpc play; mode "default"
-    bindsym h exec --no-startup-id mpc clear && mpc load hamilton && mpc shuffle && mpc play; mode "default"
-    bindsym 5 exec --no-startup-id mpc clear && mpc load 505 && mpc play; mode "default"
-    bindsym Shift+s exec --no-startup-id mpc clear && mpc load sadness && mpc play; mode "default"
-    bindsym Shift+h exec --no-startup-id mpc clear && mpc load hamilton && mpc play; mode "default"
+    bindsym s exec --no-startup-id mpc clear && mpc add sadness && mpc shuffle && mpc play; mode "default"
+    bindsym h exec --no-startup-id mpc clear && mpc add hamilton && mpc shuffle && mpc play; mode "default"
+    bindsym 5 exec --no-startup-id mpc clear && mpc add 505.flac && mpc play; mode "default"
+    bindsym Shift+s exec --no-startup-id mpc clear && mpc add sadness && mpc play; mode "default"
+    bindsym Shift+h exec --no-startup-id mpc clear && mpc add hamilton && mpc play; mode "default"
 
     bindsym Escape mode "default"
 }
