@@ -1,0 +1,12 @@
+[user]
+        email = jeremy3141592@gmail.com
+	name = Jeremy Smart
+    signingkey = 0DCAA5DAA08F19FB26E66B34779983F4BEF2BACB
+[commit]
+	gpgsign = true
+[push]
+	autoSetupRemote = true
+[includeIf "gitdir:~/rtp/csh/**"]
+        path = ~/rtp/.gitconfig-csh
+[init]
+	defaultBranch = master
