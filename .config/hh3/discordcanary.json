@@ -1,0 +1,80 @@
+{
+  "modules": {
+    "sentrynerf": true,
+    "pseudoscience": true,
+    "loadingScreen": true,
+    "antiDelete": {
+      "options": {
+        "logEdits": true,
+        "clickToHide": true
+      },
+      "enabled": true
+    },
+    "fixMentions": true,
+    "noReplyChainNag": true,
+    "3y3": true,
+    "postnet": true,
+    "autoPatch": true,
+    "downmark": true,
+    "createEmoji": true,
+    "emojiCommands": true,
+    "pseudoNitro": {
+      "options": {
+        "sendAsLink": false
+      },
+      "enabled": true
+    },
+    "allPresences": true,
+    "autocompleteTweaks": true,
+    "boop": true,
+    "clearUrls": true,
+    "dblClickEdit": {
+      "options": {
+        "allowReply": true,
+        "allowEdit": true,
+        "swapSelf": true
+      },
+      "enabled": true
+    },
+    "betterUploadButton": true,
+    "blocked": true,
+    "css": true,
+    "fixmentions": true,
+    "pinnedDMs": {
+      "options": {
+        "pinned": [
+          "1176684929808076810"
+        ]
+      },
+      "enabled": false
+    },
+    "hateno": true,
+    "customSwitcherSorting": {
+      "enabled": true,
+      "options": {
+        "mentions": 1,
+        "last_channel": 3,
+        "drafts": 4,
+        "override_mentions_position": true,
+        "unread": 2
+      }
+    },
+    "showTag": true,
+    "premiumVideo": true,
+    "platformIcons": true,
+    "timestampSeconds": true,
+    "inspect": true,
+    "linuxUpdater": true,
+    "declutterTextButtons": true,
+    "imgxis": {
+      "options": {
+        "smoothImage": true
+      },
+      "enabled": true
+    },
+    "upload": true,
+    "charcount": true,
+    "channelleak": true,
+    "disableF1Help": true
+  }
+}

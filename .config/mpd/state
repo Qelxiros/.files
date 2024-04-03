@@ -1,0 +1,166 @@
+sw_volume: 100
+audio_device_state:1:pulse audio
+audio_device_state:1:http
+audio_device_state:1:ncmpcpp_fifo
+state: play
+current: 32
+time: 120.012
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+playlist_begin
+0:sadness/5 Seconds Of Summer - Amnesia.flac
+1:sadness/Green Day - Good Riddance (Time of Your Life).flac
+2:sadness/glaive - i wanna slam my head against the wall.flac
+3:sadness/blackbear - dead inside.flac
+4:sadness/The Chainsmokers - High.flac
+5:sadness/BoyWithUke - IDGAF (feat. blackbear).flac
+6:sadness/Lewis Capaldi - Grace.flac
+7:sadness/Linkin Park - One More Light.flac
+8:sadness/Train - Drive By.flac
+9:sadness/Spotify Playlist - Hold On.flac
+10:sadness/Charlie Puth - We Don't Talk Anymore (feat. Selena Gomez).flac
+11:sadness/Eminem - The Monster.flac
+12:sadness/NF - Let You Down.flac
+13:sadness/Charlie Puth - That's Hilarious.flac
+14:sadness/Dua Lipa - Physical.flac
+15:sadness/Jeremy Zucker, Chelsea Cutler - you were good to me.flac
+16:sadness/Halsey - So Good.flac
+17:sadness/Rixton - Me and My Broken Heart.flac
+18:sadness/Olivia Rodrigo - the stranger.flac
+19:sadness/Duncan Laurence - Arcade.flac
+20:sadness/Shawn Mendes - Wonder.flac
+21:sadness/Ashe, FINNEAS - Till Forever Falls Apart.flac
+22:sadness/Maroon 5 - Payphone.flac
+23:sadness/Lewis Capaldi - Before You Go.flac
+24:sadness/Linkin Park - Sharp Edges.flac
+25:sadness/Charlieonnafriday - Enough.flac
+26:sadness/FLETCHER - If You’re Gonna Lie.flac
+27:sadness/Alex & Sierra - Little Do You Know.flac
+28:sadness/Sadie Jean - Locksmith.flac
+29:sadness/Ali Gatie - It's You.flac
+30:sadness/Olivia Rodrigo - the grudge.flac
+31:sadness/Ali Gatie - What If I Told You That I Love You.flac
+32:sadness/Avicii - Wake Me Up.flac
+33:sadness/Lukas Graham - Love Someone.flac
+34:sadness/blackbear - me & ur ghost.flac
+35:sadness/Olivia Rodrigo - happier.flac
+36:sadness/blackbear - @ my worst.flac
+37:sadness/James TW - When You Love Someone.flac
+38:sadness/5 Seconds of Summer - Me Myself & I.flac
+39:sadness/Zedd & Elley Duhé - Happy Now.flac
+40:sadness/Halsey - You should be sad.flac
+41:sadness/Powfu, beabadoobee - death bed (coffee for your head).flac
+42:sadness/Trevor Daniel  - Falling (feat. blackbear) (blackbear Remix).flac
+43:sadness/The Kid LAROI - WITHOUT YOU.flac
+44:sadness/The Vamps - Somebody To You.flac
+45:sadness/Miley Cyrus - Angels Like You.flac
+46:sadness/Zara Larsson & Mnek - Never Forget You.flac
+47:sadness/JP Saxe - If the World Was Ending.flac
+48:sadness/Lewis Capaldi - Someone You Loved.flac
+49:sadness/Olivia Rodrigo - drivers license.flac
+50:sadness/Linkin Park - Nobody Can Save Me.flac
+51:sadness/James Arthur - Say You Won't Let Go.flac
+52:sadness/Logic - 1-800-273-8255.flac
+53:sadness/Dean Lewis - Trust Me Mate.flac
+54:sadness/lovelytheband - broken.flac
+55:sadness/Eminem - Love The Way You Lie.flac
+56:sadness/Olivia Rodrigo - good 4 u.flac
+57:sadness/Olivia Rodrigo - deja vu.flac
+58:sadness/Gnash - i hate u, i love u (feat. olivia o'brien).flac
+59:sadness/Taylor Swift - Wildest Dreams (Taylor's Version).flac
+60:sadness/Calum Scott - You Are The Reason.flac
+61:sadness/Tate McRae - feel like shit.flac
+62:sadness/Sasha Alex Sloan - Dancing With Your Ghost.flac
+63:sadness/Olivia Rodrigo - 1 step forward, 3 steps back.flac
+64:sadness/Bastille - Pompeii.flac
+65:sadness/Sabrina Carpenter - Thumbs.flac
+66:sadness/NF - Lie.flac
+67:sadness/Dean Lewis - Hurtless.flac
+68:sadness/Olivia Rodrigo - favorite crime.flac
+69:sadness/Forest Blakk - If You Love Her.flac
+70:sadness/Benson Boone - GHOST TOWN.flac
+71:sadness/Miley Cyrus - Wrecking Ball.flac
+72:sadness/Chloe Adams - Dirty Thoughts.flac
+73:sadness/Lauv & Troye Sivan - I'm So Tired....flac
+74:sadness/GAYLE - abcdefu.flac
+75:sadness/Lewis Capaldi - Hold Me While You Wait.flac
+76:sadness/Gracie Abrams - Feels Like.flac
+77:sadness/Calvin Harris, Ellie Goulding - Outside (feat. Ellie Goulding).flac
+78:sadness/Olivia Rodrigo - traitor.flac
+79:sadness/Jenna Raine - see you later (ten years).flac
+80:sadness/Tate McRae - rubberband.flac
+81:sadness/Olivia Rodrigo - enough for you.flac
+82:sadness/P!nk, Khalid - Hurts 2B Human.flac
+83:sadness/Charlie Puth - Light Switch.flac
+84:sadness/Zedd feat. Foxes - Clarity.flac
+85:sadness/Sam Fischer - This City.flac
+86:sadness/Zoe Wees - Control.flac
+87:sadness/Marshmello - Happier (feat. Bastille).flac
+88:sadness/Avicii - The Nights.flac
+89:sadness/FINNEAS - Break My Heart Again.flac
+90:sadness/Selena Gomez - People You Know.flac
+91:sadness/Niall Horan - This Town.flac
+92:sadness/Camila Cabello - psychofreak.flac
+93:sadness/Demi Lovato - Heart Attack.flac
+94:sadness/Fall Out Boy - Centuries.flac
+95:sadness/Bastille - Good Grief.flac
+96:sadness/Alec Benjamin - Mind Is a Prison.flac
+97:sadness/Imagine Dragons - Radioactive.flac
+98:sadness/Linkin Park - Heavy.flac
+99:sadness/Lauv - I Like Me Better.flac
+100:sadness/Julia Michaels - Issues.flac
+101:sadness/Tate McRae - you broke me first.flac
+102:sadness/Ashe - Moral Of The Story.flac
+103:sadness/Madison Beer - Reckless.flac
+104:sadness/Lukas Graham - 7 Years.flac
+105:sadness/Lewis Capaldi - Bruises.flac
+106:sadness/Olivia Rodrigo - making the bed.flac
+107:sadness/Why Don't We - Fallin’ (Adrenaline).flac
+108:sadness/Dean Lewis - How Do I Say Goodbye.flac
+109:sadness/Ariana Grande - One Last Time.flac
+110:sadness/Dean Lewis - Waves.flac
+111:sadness/Shawn Mendes - When You're Gone.flac
+112:sadness/Lewis Capaldi - Forever.flac
+113:sadness/Lauren Spencer Smith - Bigger Person.flac
+114:sadness/Noah Cyrus - July.flac
+115:sadness/Lewis Capaldi - Forget Me.flac
+116:sadness/Tate McRae - that way.flac
+117:sadness/Dean Lewis, Nick Atkinson, Edd Holloway - Be Alright.flac
+118:sadness/Echosmith - Cool Kids.flac
+119:sadness/Tate McRae - she's all i wanna be.flac
+120:sadness/Linkin Park - Halfway Right.flac
+121:sadness/Wiz Khalifa & Charlie Puth - See You Again (feat. Charlie Puth).flac
+122:sadness/Jeremy Zucker - all the kids are depressed.flac
+123:sadness/Twenty One Pilots - Heathens.flac
+124:sadness/Gracie Abrams - I miss you, I’m sorry.flac
+125:sadness/Olivia Rodrigo - jealousy, jealousy.flac
+126:sadness/nf - If You Want Love.flac
+127:sadness/Harry Styles - Falling.flac
+128:sadness/B.o.B & Hayley Williams - Airplanes (feat. Hayley Williams).flac
+129:sadness/Dean Lewis - Half A Man.flac
+130:sadness/James Arthur - Train Wreck.flac
+131:sadness/Olivia Rodrigo - bad idea right?.flac
+132:sadness/Ava Max - Sweet but Psycho.flac
+133:sadness/Astrid S - Hurts So Good.flac
+134:sadness/Alexander 23 - IDK You Yet.flac
+135:sadness/Olivia Rodrigo - vampire.flac
+136:sadness/Conan Gray - Maniac.flac
+137:sadness/Olivia Rodrigo - brutal.flac
+138:sadness/Linkin Park - Friendly Fire.flac
+139:sadness/Maroon 5 - Maps.flac
+140:sadness/Lauren Spencer Smith - Fingers Crossed.flac
+141:sadness/Benson Boone - In The Stars.flac
+142:sadness/Passenger - Let Her Go.flac
+143:sadness/Taylor Swift - exile.flac
+144:sadness/Maroon 5 - Memories.flac
+145:sadness/Ellie Goulding & Juice WRLD - Hate Me.flac
+146:sadness/5SOS - Teeth.flac
+147:sadness/Gabby Barrett - I Hope.flac
+148:sadness/Sara Kays - Remember That Night.flac
+149:sadness/Olivia Rodrigo - hope ur ok.flac
+playlist_end
