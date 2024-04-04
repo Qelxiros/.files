@@ -31,6 +31,8 @@ k("v", ">", ">gv", conf)
 k("x", "<", "<gv", conf)
 k("x", ">", ">gv", conf)
 
+k("n", "<M-u>", ":UndotreeToggle<CR>", conf)
+
 vim.opt.relativenumber = false
 
 return {
