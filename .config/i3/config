@@ -225,20 +225,20 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "mpd" {
-    bindsym s exec --no-startup-id echo -e " && mpc add sadness\c" >> ~/.config/i3/mpd_command_builder
-    bindsym h exec --no-startup-id echo -e " && mpc add hamilton\c" >> ~/.config/i3/mpd_command_builder
-    bindsym l exec --no-startup-id echo -e " && mpc add sadness/linkin_park\c" >> ~/.config/i3/mpd_command_builder
-    bindsym c exec --no-startup-id echo -e " && mpc add sadness/lewis_capaldi\c" >> ~/.config/i3/mpd_command_builder
-    bindsym o exec --no-startup-id echo -e " && mpc add sadness/olivia_rodrigo\c" >> ~/.config/i3/mpd_command_builder
-    bindsym 5 exec --no-startup-id echo -e " && mpc add 505.flac\c" >> ~/.config/i3/mpd_command_builder
+    bindsym s exec --no-startup-id echo -e " && mpc add sadness\c" >> ~/.config/i3/mpd_command_builder && echo -e "s\c" >> ~/.config/i3/chord_log
+    bindsym h exec --no-startup-id echo -e " && mpc add hamilton\c" >> ~/.config/i3/mpd_command_builder && echo -e "h\c" >> ~/.config/i3/chord_log
+    bindsym l exec --no-startup-id echo -e " && mpc add sadness/linkin_park\c" >> ~/.config/i3/mpd_command_builder && echo -e "l\c" >> ~/.config/i3/chord_log
+    bindsym c exec --no-startup-id echo -e " && mpc add sadness/lewis_capaldi\c" >> ~/.config/i3/mpd_command_builder && echo -e "c\c" >> ~/.config/i3/chord_log
+    bindsym o exec --no-startup-id echo -e " && mpc add sadness/olivia_rodrigo\c" >> ~/.config/i3/mpd_command_builder && echo -e "o\c" >> ~/.config/i3/chord_log
+    bindsym 5 exec --no-startup-id echo -e " && mpc add 505.flac\c" >> ~/.config/i3/mpd_command_builder && echo -e "5\c" >> ~/.config/i3/chord_log
 
-    bindsym Escape exec --no-startup-id rm ~/.config/i3/mpd_command_builder; mode "default"
-    bindsym Return exec --no-startup-id echo " && mpc shuffle && mpc play" >> ~/.config/i3/mpd_command_builder && ~/.config/i3/mpd_command_builder & rm ~/.config/i3/mpd_command_builder; mode "default"
+    bindsym Escape exec --no-startup-id rm ~/.config/i3/mpd_command_builder; exec --no-startup-id echo "" > ~/.config/i3/chord_log; mode "default"
+    bindsym Return exec --no-startup-id echo " && mpc shuffle && mpc play" >> ~/.config/i3/mpd_command_builder && ~/.config/i3/mpd_command_builder & rm ~/.config/i3/mpd_command_builder; exec echo "" > ~/.config/i3/chord_log; mode "default"
 }
 
-bindsym $mod+m exec --no-startup-id echo -e "mpc clear\c" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder; mode "mpd"
+bindsym $mod+m exec --no-startup-id echo -e "mpc clear\c" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -e "<s-m>\c" > ~/.config/i3/chord_log; mode "mpd"
 
-bindsym $mod+Shift+m exec --no-startup-id echo -e "mpc current --wait && mpc clear\c" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder; mode "mpd"
+bindsym $mod+Shift+m exec --no-startup-id echo -e "mpc current --wait && mpc clear\c" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -e "<s-S-m>\c" > ~/.config/i3/chord_log; mode "mpd"
 
 mode "waterfox" {
     bindsym u exec --no-startup-id waterfox 'https://p.datadoghq.com/sb/44f16805b-663b1289003f0814a46720ff0d9472fc?refresh_mode=sliding&theme=dark&tv_mode=true&from_ts=1701948560100&to_ts=1701952160100&live=true'; mode "default"
