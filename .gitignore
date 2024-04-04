@@ -1,5 +1,8 @@
 *
 !.git*
+!.Xmodmap
+!.xinitrc
+!.p10k.zsh
 !.config/
 !.config/dunst/
 !.config/dunst/**/*
@@ -30,4 +33,5 @@
 .config/dunst/histfile*
 .config/hh3/babelCache/
 .config/mpd/state
+.config/mpd/database
 **/*.bak
