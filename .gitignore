@@ -34,4 +34,6 @@
 .config/hh3/babelCache/
 .config/mpd/state
 .config/mpd/database
+.config/systemd/battery_script_utility
+.config/polybar/scroll_pid
 **/*.bak

@@ -34,11 +34,3 @@ k("x", ">", ">gv", conf)
 k("n", "<M-u>", ":UndotreeToggle<CR>", conf)
 
 vim.opt.relativenumber = false
-
-return {
-  lsp = {
-    formatting = {
-      format_on_save = false, -- enable or disable automatic formatting on save
-    },
-  },
-}
