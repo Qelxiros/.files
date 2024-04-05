@@ -20,6 +20,8 @@
 !.config/mpd/**/*
 !.config/nitrogen/
 !.config/nitrogen/**/*
+!.config/nvim
+!.config/nvim/astronvim
 !.config/polybar/
 !.config/polybar/**/*
 !.config/rofi/
