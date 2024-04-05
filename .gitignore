@@ -6,8 +6,6 @@
 !.config/
 !.config/dunst/
 !.config/dunst/**/*
-!.config/gh/
-!.config/gh/**/*
 !.config/git/
 !.config/git/**/*
 !.config/hh3/
@@ -22,8 +20,8 @@
 !.config/mpd/**/*
 !.config/nitrogen/
 !.config/nitrogen/**/*
-!.config/nvim/
-!.config/nvim/**/*
+!.config/nvim/init.lua
+!.config/nvim/lua/plugins/undotree.lua
 !.config/polybar/
 !.config/polybar/**/*
 !.config/rofi/

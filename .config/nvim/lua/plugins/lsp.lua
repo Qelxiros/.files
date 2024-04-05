@@ -95,10 +95,4 @@ return {
       },
     },
   },
-  lsp = {
-    formatting = {
-      format_on_save = true,
-      timeout_ms = 10000,
-    }
-  },
 }
