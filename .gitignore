@@ -20,8 +20,6 @@
 !.config/mpd/**/*
 !.config/nitrogen/
 !.config/nitrogen/**/*
-!.config/nvim/init.lua
-!.config/nvim/lua/plugins/undotree.lua
 !.config/polybar/
 !.config/polybar/**/*
 !.config/rofi/
