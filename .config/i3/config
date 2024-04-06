@@ -233,7 +233,7 @@ mode "mpd" {
     bindsym 5 exec --no-startup-id echo -n " && mpc add 505.flac" >> ~/.config/i3/mpd_command_builder && echo -n "5" >> ~/.config/i3/chord_log
 
     bindsym Escape exec --no-startup-id rm ~/.config/i3/mpd_command_builder; exec --no-startup-id echo "" > ~/.config/i3/chord_log; mode "default"
-    bindsym Return exec --no-startup-id echo -n "<CR>" >> ~/.config/i3/chord_log; exec --no-startup-id echo " && mpc shuffle && mpc play && cat ~/.config/i3/chord_log > ~/.config/i3/mpd_status && echo "" > ~/.config/i3/chord_log" >> ~/.config/i3/mpd_command_builder && ~/.config/i3/mpd_command_builder &; mode "default"
+    bindsym Return exec --no-startup-id echo -n "<CR>" >> ~/.config/i3/chord_log; exec --no-startup-id echo " && mpc shuffle && mpc play && cat ~/.config/i3/chord_log | sed 's/<.*>\(.*\)<.*>/\1/g' | perl -F -lane 'print sort @F' > ~/.config/i3/mpd_status && echo "" > ~/.config/i3/chord_log" >> ~/.config/i3/mpd_command_builder && ~/.config/i3/mpd_command_builder &; mode "default"
 }
 
 bindsym $mod+m exec --no-startup-id echo -n "mpc clear" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -n "<s-m>" > ~/.config/i3/chord_log; mode "mpd"
