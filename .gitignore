@@ -29,6 +29,7 @@
 !.config/systemd/**/*
 .config/dunst/histfile*
 .config/hh3/babelCache/
+.config/i3/mpd*
 .config/mpd/state
 .config/mpd/database
 .config/systemd/battery_script_utility
