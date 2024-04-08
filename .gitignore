@@ -10,8 +10,6 @@
 !.config/git/**/*
 !.config/hh3/
 !.config/hh3/**/*
-!.config/htop/
-!.config/htop/**/*
 !.config/i3/
 !.config/i3/**/*
 !.config/kitty/

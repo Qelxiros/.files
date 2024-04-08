@@ -1,6 +1,4 @@
-[submodule ".config/nvim/astronvim"]
-	path = .config/nvim
-	url = git@github.com:qelxiros/astronvim
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:qelxiros/astronvim
+	branch = main
