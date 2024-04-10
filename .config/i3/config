@@ -30,9 +30,9 @@ default_border pixel 0
 default_floating_border pixel 0
 
 # Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && ~/.config/i3/volume_script.sh >&2 2> /tmp/err
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && ~/.config/i3/volume_script.sh >&2 2> /tmp/err
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && ~/.config/i3/volume_script.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl --device='intel_backlight' set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --device='intel_backlight' set 10-%
@@ -250,7 +250,6 @@ mode "waterfox" {
 
 bindsym $mod+w mode "waterfox"
 
-exec --no-startup-id nitrogen --restore &
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec_always --no-startup-id polkit-dumb-agent &
 exec_always --no-startup-id brightnessctl -q --device='tpacpi::kbd_backlight' set 1
