@@ -250,6 +250,7 @@ mode "waterfox" {
 
 bindsym $mod+w mode "waterfox"
 
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/wave.png
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec_always --no-startup-id polkit-dumb-agent &
 exec_always --no-startup-id brightnessctl -q --device='tpacpi::kbd_backlight' set 1

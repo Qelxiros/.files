@@ -70,7 +70,7 @@
       "options": {
         "smoothImage": true
       },
-      "enabled": true
+      "enabled": false
     },
     "upload": true,
     "charcount": true,
