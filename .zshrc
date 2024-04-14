@@ -38,6 +38,7 @@ alias dfg='git --git-dir=$HOME/.files --work-tree=$HOME -c color.ui=always'
 alias hibernate='systemctl hibernate; exit'
 alias cargon='cargo +nightly'
 alias fd='fd -u'
+alias rg='rg -uu'
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx

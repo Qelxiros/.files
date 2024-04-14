@@ -225,11 +225,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "mpd" {
-    bindsym s exec --no-startup-id echo -n " && mpc add sadness" >> ~/.config/i3/mpd_command_builder && echo -n "s" >> ~/.config/i3/chord_log
+    bindsym c exec --no-startup-id echo -n " && mpc add sadness/lewis_capaldi" >> ~/.config/i3/mpd_command_builder && echo -n "c" >> ~/.config/i3/chord_log
     bindsym h exec --no-startup-id echo -n " && mpc add hamilton" >> ~/.config/i3/mpd_command_builder && echo -n "h" >> ~/.config/i3/chord_log
     bindsym l exec --no-startup-id echo -n " && mpc add sadness/linkin_park" >> ~/.config/i3/mpd_command_builder && echo -n "l" >> ~/.config/i3/chord_log
-    bindsym c exec --no-startup-id echo -n " && mpc add sadness/lewis_capaldi" >> ~/.config/i3/mpd_command_builder && echo -n "c" >> ~/.config/i3/chord_log
     bindsym o exec --no-startup-id echo -n " && mpc add sadness/olivia_rodrigo" >> ~/.config/i3/mpd_command_builder && echo -n "o" >> ~/.config/i3/chord_log
+    bindsym s exec --no-startup-id echo -n " && mpc add sadness" >> ~/.config/i3/mpd_command_builder && echo -n "s" >> ~/.config/i3/chord_log
+    bindsym u exec --no-startup-id echo -n " && mpc add underscores" >> ~/.config/i3/mpd_command_builder && echo -n "u" >> ~/.config/i3/chord_log
     bindsym 5 exec --no-startup-id echo -n " && mpc add 505.flac" >> ~/.config/i3/mpd_command_builder && echo -n "5" >> ~/.config/i3/chord_log
 
     bindsym Escape exec --no-startup-id rm ~/.config/i3/mpd_command_builder; exec --no-startup-id echo "" > ~/.config/i3/chord_log; mode "default"
