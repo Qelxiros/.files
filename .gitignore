@@ -34,5 +34,6 @@
 .config/mpd/state
 .config/mpd/database
 .config/systemd/battery_script_utility
+.config/systemd/user/*.wants
 .config/polybar/scroll_pid
 **/*.bak
