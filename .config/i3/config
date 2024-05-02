@@ -229,17 +229,18 @@ mode "mpd" {
     bindsym h exec --no-startup-id echo -n " && mpc add hamilton" >> ~/.config/i3/mpd_command_builder && echo -n "h" >> ~/.config/i3/chord_log
     bindsym l exec --no-startup-id echo -n " && mpc add sadness/linkin_park" >> ~/.config/i3/mpd_command_builder && echo -n "l" >> ~/.config/i3/chord_log
     bindsym o exec --no-startup-id echo -n " && mpc add sadness/olivia_rodrigo" >> ~/.config/i3/mpd_command_builder && echo -n "o" >> ~/.config/i3/chord_log
+    bindsym Shift+o exec --no-startup-id echo -n " && mpc add joeneil/olivia_rodrigo" >> ~/.config/i3/mpd_command_builder && echo -n "O" >> ~/.config/i3/chord_log
     bindsym s exec --no-startup-id echo -n " && mpc add sadness" >> ~/.config/i3/mpd_command_builder && echo -n "s" >> ~/.config/i3/chord_log
     bindsym u exec --no-startup-id echo -n " && mpc add underscores" >> ~/.config/i3/mpd_command_builder && echo -n "u" >> ~/.config/i3/chord_log
     bindsym 5 exec --no-startup-id echo -n " && mpc add 505.flac" >> ~/.config/i3/mpd_command_builder && echo -n "5" >> ~/.config/i3/chord_log
 
     bindsym Escape exec --no-startup-id rm ~/.config/i3/mpd_command_builder; exec --no-startup-id echo "" > ~/.config/i3/chord_log; mode "default"
-    bindsym Return exec --no-startup-id echo -n "<CR>" >> ~/.config/i3/chord_log; exec --no-startup-id echo " && mpc shuffle && mpc play && cat ~/.config/i3/chord_log | sed 's/<.*>\(.*\)<.*>/\1/g' | perl -F -lane 'print sort @F' > ~/.config/i3/mpd_status && echo "" > ~/.config/i3/chord_log" >> ~/.config/i3/mpd_command_builder && ~/.config/i3/mpd_command_builder &; mode "default"
+    bindsym Return exec --no-startup-id "echo -n '&lt;CR&gt;' >> ~/.config/i3/chord_log"; exec --no-startup-id echo " && mpc shuffle && mpc play && cat ~/.config/i3/chord_log | sed 's/<.*>\(.*\)<.*>/\1/g' | perl -F -lane 'print sort @F' > ~/.config/i3/mpd_status && echo "" > ~/.config/i3/chord_log" >> ~/.config/i3/mpd_command_builder && ~/.config/i3/mpd_command_builder &; mode "default"
 }
 
-bindsym $mod+m exec --no-startup-id echo -n "mpc clear" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -n "<s-m>" > ~/.config/i3/chord_log; mode "mpd"
+bindsym $mod+m exec --no-startup-id "echo -n 'mpc clear' > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -n '&lt;s-m&gt;' > ~/.config/i3/chord_log"; mode "mpd"
 
-bindsym $mod+Shift+m exec --no-startup-id echo -n "perl -pi -e 's/(.*)/%{F#f00}\1%{F-}/' ~/.config/i3/mpd_status && mpc current --wait && mpc clear" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -n "<s-S-m>" > ~/.config/i3/chord_log; mode "mpd"
+bindsym $mod+Shift+m exec --no-startup-id "echo -n \\"perl -pi -e 's/(.*)/%{F#f00}\1%{F-}/' ~/.config/i3/mpd_status && mpc current --wait && mpc clear\\" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -n '&lt;s-S-m&gt;' > ~/.config/i3/chord_log"; mode "mpd"
 
 mode "waterfox" {
     bindsym u exec --no-startup-id waterfox 'https://p.datadoghq.com/sb/44f16805b-663b1289003f0814a46720ff0d9472fc?refresh_mode=sliding&theme=dark&tv_mode=true&from_ts=1701948560100&to_ts=1701952160100&live=true'; mode "default"
@@ -269,5 +270,6 @@ exec --no-startup-id "i3-msg 'workspace 10; append_layout ~/.config/i3/workspace
 
 bindsym $mod+Shift+s exec --no-startup-id slack
 bindsym $mod+Shift+d exec --no-startup-id /home/jeremy/.local/share/DiscordCanary/DiscordCanary
+bindsym $mod+Shift+t exec --no-startup-id thunderbird
 
 focus_on_window_activation focus
