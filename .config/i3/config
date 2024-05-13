@@ -228,6 +228,7 @@ mode "mpd" {
     bindsym c exec --no-startup-id echo -n " && mpc add sadness/lewis_capaldi" >> ~/.config/i3/mpd_command_builder && echo -n "c" >> ~/.config/i3/chord_log
     bindsym h exec --no-startup-id echo -n " && mpc add hamilton" >> ~/.config/i3/mpd_command_builder && echo -n "h" >> ~/.config/i3/chord_log
     bindsym l exec --no-startup-id echo -n " && mpc add sadness/linkin_park" >> ~/.config/i3/mpd_command_builder && echo -n "l" >> ~/.config/i3/chord_log
+    bindsym n exec --no-startup-id echo -n " && mpc add sadness/noah_kahan" >> ~/.config/i3/mpd_command_builder && echo -n "o" >> ~/.config/i3/chord_log
     bindsym o exec --no-startup-id echo -n " && mpc add sadness/olivia_rodrigo" >> ~/.config/i3/mpd_command_builder && echo -n "o" >> ~/.config/i3/chord_log
     bindsym Shift+o exec --no-startup-id echo -n " && mpc add joeneil/olivia_rodrigo" >> ~/.config/i3/mpd_command_builder && echo -n "O" >> ~/.config/i3/chord_log
     bindsym s exec --no-startup-id echo -n " && mpc add sadness" >> ~/.config/i3/mpd_command_builder && echo -n "s" >> ~/.config/i3/chord_log

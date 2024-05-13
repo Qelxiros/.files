@@ -22,7 +22,7 @@ export TERMINAL=kitty
 
 source $ZSH/oh-my-zsh.sh
 
-alias l='ls -lApv --group-directories-first --block-size=h --color=always'
+alias l='eza -lagBMo --no-permissions --sort type --color-scale age --time-style "+%Y-%m-%d %T"'
 alias clr='clear && fastfetch'
 alias ec='$EDITOR $HOME/.zshrc'
 alias sc='source $HOME/.zshrc'
@@ -37,6 +37,7 @@ alias hibernate='systemctl hibernate; exit'
 alias cargon='cargo +nightly'
 alias fd='fd -u'
 alias rg='rg -uu'
+alias ncdu='ncdu --color=dark'
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
@@ -49,5 +50,6 @@ unsetopt autocd
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+source ~/.profile
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
