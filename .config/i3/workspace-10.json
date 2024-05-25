@@ -19,14 +19,14 @@
                "y": 0
             },
             "marks": [],
-            "name": "Bluetooth Devices",
+            "name": "blueman-manager",
             "percent": 0.5,
             "swallows": [
                {
                "class": "^Blueman\\-manager$"
                // "instance": "^blueman\\-manager$",
                // "machine": "^breakfast\\-burrito$",
-               // "title": "^Bluetooth\\ Devices$"
+               // "title": "^blueman\\-manager$"
                }
             ],
             "type": "con"
@@ -36,20 +36,20 @@
             "current_border_width": 0,
             "floating": "auto_off",
             "geometry": {
-               "height": 1008,
-               "width": 960,
+               "height": 333,
+               "width": 264,
                "x": 0,
                "y": 0
             },
             "marks": [],
-            "name": "Volume Control",
+            "name": "Screen Layout Editor",
             "percent": 0.5,
             "swallows": [
                {
-               "class": "^Pavucontrol$"
-               // "instance": "^pavucontrol$",
+               "class": "^Arandr$"
+               // "instance": "^arandr$",
                // "machine": "^breakfast\\-burrito$",
-               // "title": "^Volume\\ Control$"
+               // "title": "^Screen\\ Layout\\ Editor$"
                }
             ],
             "type": "con"
@@ -62,20 +62,20 @@
     "current_border_width": 0,
     "floating": "auto_off",
     "geometry": {
-       "height": 333,
-       "width": 264,
+       "height": 1008,
+       "width": 960,
        "x": 0,
        "y": 0
     },
     "marks": [],
-    "name": "Screen Layout Editor",
+    "name": "Volume Control",
     "percent": 0.5,
     "swallows": [
        {
-       "class": "^Arandr$"
-       // "instance": "^arandr$",
+       "class": "^Pavucontrol$"
+       // "instance": "^pavucontrol$",
        // "machine": "^breakfast\\-burrito$",
-       // "title": "^Screen\\ Layout\\ Editor$"
+       // "title": "^Volume\\ Control$"
        }
     ],
     "type": "con"
