@@ -108,7 +108,7 @@ bindsym $mod+b split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+e layout toggle split
@@ -202,6 +202,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+Shift+x exec --no-startup-id /home/jeremy/.config/i3/fix_x.sh
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -231,35 +233,131 @@ bindsym $mod+r mode "resize"
 
 mode "mpd" {
     bindsym c exec --no-startup-id echo -n " && mpc add sadness/lewis_capaldi" >> ~/.config/i3/mpd_command_builder && echo -n "c" >> ~/.config/i3/chord_log
+    bindsym f exec --no-startup-id echo -n " && mpc add sadness/misc_favorites" >> ~/.config/i3/mpd_command_builder && echo -n "f" >> ~/.config/i3/chord_log
+    bindsym g exec --no-startup-id echo -n " && mpc add sadness/olivia_rodrigo/guts" >> ~/.config/i3/mpd_command_builder && echo -n "g" >> ~/.config/i3/chord_log
     bindsym h exec --no-startup-id echo -n " && mpc add hamilton" >> ~/.config/i3/mpd_command_builder && echo -n "h" >> ~/.config/i3/chord_log
     bindsym l exec --no-startup-id echo -n " && mpc add sadness/linkin_park" >> ~/.config/i3/mpd_command_builder && echo -n "l" >> ~/.config/i3/chord_log
-    bindsym n exec --no-startup-id echo -n " && mpc add sadness/noah_kahan" >> ~/.config/i3/mpd_command_builder && echo -n "o" >> ~/.config/i3/chord_log
+    bindsym n exec --no-startup-id echo -n " && mpc add sadness/noah_kahan" >> ~/.config/i3/mpd_command_builder && echo -n "n" >> ~/.config/i3/chord_log
     bindsym o exec --no-startup-id echo -n " && mpc add sadness/olivia_rodrigo" >> ~/.config/i3/mpd_command_builder && echo -n "o" >> ~/.config/i3/chord_log
     bindsym Shift+o exec --no-startup-id echo -n " && mpc add joeneil/olivia_rodrigo" >> ~/.config/i3/mpd_command_builder && echo -n "O" >> ~/.config/i3/chord_log
-    bindsym s exec --no-startup-id echo -n " && mpc add sadness" >> ~/.config/i3/mpd_command_builder && echo -n "s" >> ~/.config/i3/chord_log
+    bindsym s exec --no-startup-id echo -n " && mpc add sadness/olivia_rodrigo/sour" >> ~/.config/i3/mpd_command_builder && echo -n "s" >> ~/.config/i3/chord_log
+    bindsym Shift+s exec --no-startup-id echo -n " && mpc add sadness" >> ~/.config/i3/mpd_command_builder && echo -n "S" >> ~/.config/i3/chord_log
     bindsym u exec --no-startup-id echo -n " && mpc add underscores" >> ~/.config/i3/mpd_command_builder && echo -n "u" >> ~/.config/i3/chord_log
     bindsym 5 exec --no-startup-id echo -n " && mpc add 505.flac" >> ~/.config/i3/mpd_command_builder && echo -n "5" >> ~/.config/i3/chord_log
 
     bindsym Escape exec --no-startup-id rm ~/.config/i3/mpd_command_builder; exec --no-startup-id echo "" > ~/.config/i3/chord_log; mode "default"
-    bindsym Return exec --no-startup-id "echo -n '&lt;CR&gt;' >> ~/.config/i3/chord_log"; exec --no-startup-id echo " && mpc shuffle && mpc play && cat ~/.config/i3/chord_log | sed 's/<.*>\(.*\)<.*>/\1/g' | perl -F -lane 'print sort @F' > ~/.config/i3/mpd_status && echo "" > ~/.config/i3/chord_log" >> ~/.config/i3/mpd_command_builder && ~/.config/i3/mpd_command_builder &; mode "default"
+    bindsym Return exec --no-startup-id "echo -n '&lt;CR&gt;' >> ~/.config/i3/chord_log"; exec --no-startup-id ~/.config/i3/mpd_helper.sh && ~/.config/i3/mpd_command_builder &; mode "default"
+    bindsym Shift+Return exec --no-startup-id "echo -n '&lt;S-CR&gt;' >> ~/.config/i3/chord_log"; exec --no-startup-id ~/.config/i3/mpd_helper_noshuffle.sh && ~/.config/i3/mpd_command_builder &; mode "default"
 }
 
 bindsym $mod+m exec --no-startup-id "echo -n 'mpc clear' > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -n '&lt;s-m&gt;' > ~/.config/i3/chord_log"; mode "mpd"
 
-bindsym $mod+Shift+m exec --no-startup-id "echo -n \\"perl -pi -e 's/(.*)/%{F#f00}\1%{F-}/' ~/.config/i3/mpd_status && mpc current --wait && mpc clear\\" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -n '&lt;s-S-m&gt;' > ~/.config/i3/chord_log"; mode "mpd"
+bindsym $mod+Shift+m exec --no-startup-id "echo -n \\"~/.config/i3/mpd_helper2.sh && mpc current --wait && mpc clear\\" > ~/.config/i3/mpd_command_builder && chmod +x ~/.config/i3/mpd_command_builder && echo -n '&lt;s-S-m&gt;' > ~/.config/i3/chord_log"; mode "mpd"
 
-mode "waterfox" {
-    bindsym u exec --no-startup-id waterfox 'https://p.datadoghq.com/sb/44f16805b-663b1289003f0814a46720ff0d9472fc?refresh_mode=sliding&theme=dark&tv_mode=true&from_ts=1701948560100&to_ts=1701952160100&live=true'; mode "default"
-    bindsym q exec --no-startup-id waterfox 'https://quotefault.csh.rit.edu'; mode "default"
-    bindsym c exec --no-startup-id waterfox 'https://calendar.google.com'; mode "default"
+bindsym $mod+w mode "browser"
 
+mode "browser" {
+    bindsym q exec --no-startup-id "librewolf https://quotefault.csh.rit.edu"; mode "default"
+    bindsym Shift+q exec --no-startup-id "librewolf --new-window https://quotefault.csh.rit.edu"; mode "default"
+    bindsym Control+q exec --no-startup-id "librewolf https://quotefault.csh.rit.edu"
+    bindsym Shift+Control+q exec --no-startup-id "librewolf --new-window https://quotefault.csh.rit,edu"
+
+    bindsym w exec --no-startup-id "librewolf https://wiki.csh.rit.edu"; mode "default"
+    bindsym Shift+w exec --no-startup-id "librewolf --new-window https://wiki.csh.rit.edu"; mode "default"
+    bindsym Control+w exec --no-startup-id "librewolf https://wiki.csh.rit.edu"
+    bindsym Shift+Control+w exec --no-startup-id "librewolf --new-window https://wiki.csh.rit.edu"
+
+    bindsym e exec --no-startup-id "librewolf"; mode "default"
+    bindsym Shift+e exec --no-startup-id "librewolf --private-window"; mode "default"
+    bindsym Control+e exec --no-startup-id "librewolf"
+    bindsym Shift+Control+e exec --no-startup-id "librewolf --private-window"
+
+    bindsym y exec --no-startup-id "librewolf https://profiles.csh.rit.edu"; mode "default"
+    bindsym Shift+y exec --no-startup-id "librewolf --new-window https://profiles.csh.rit.edu"; mode "default"
+    bindsym Control+y exec --no-startup-id "librewolf https://profiles.csh.rit.edu"
+    bindsym Shift+Control+y exec --no-startup-id "librewolf --new-window https://profiles.csh.rit.edu"
+
+    bindsym u exec --no-startup-id "librewolf https://p.datadoghq.com/sb/44f16805b-663b1289003f0814a46720ff0d9472fc?theme=dark"; mode "default"
+    bindsym Shift+u exec --no-startup-id "librewolf --new-window https://p.datadoghq.com/sb/44f16805b-663b1289003f0814a46720ff0d9472fc?theme=dark"; mode "default"
+    bindsym Control+u exec --no-startup-id "librewolf https://p.datadoghq.com/sb/44f16805b-663b1289003f0814a46720ff0d9472fc?theme=dark"
+    bindsym Shift+Control+u exec --no-startup-id "librewolf --new-window https://p.datadoghq.com/sb/44f16805b-663b1289003f0814a46720ff0d9472fc?theme=dark"
+
+    bindsym o exec --no-startup-id "librewolf https://console.okd4.csh.rit.edu"; mode "default"
+    bindsym Shift+o exec --no-startup-id "librewolf --new-window https://console.okd4.csh.rit.edu"; mode "default"
+    bindsym Control+o exec --no-startup-id "librewolf https://console.okd4.csh.rit.edu"
+    bindsym Shift+Control+o exec --no-startup-id "librewolf --new-window https://console.okd4.csh.rit.edu"
+
+    bindsym p exec --no-startup-id "librewolf https://app.plex.tv/desktop"; mode "default"
+    bindsym Shift+p exec --no-startup-id "librewolf --new-window https://app.plex.tv/desktop"; mode "default"
+    bindsym Control+p exec --no-startup-id "librewolf https://app.plex.tv/desktop"
+    bindsym Shift+Control+p exec --no-startup-id "librewolf --new-window https://app.plex.tv/desktop"
+
+    bindsym s exec --no-startup-id "librewolf https://starrs.csh.rit.edu"; mode "default"
+    bindsym Shift+s exec --no-startup-id "librewolf --new-window https://starrs.csh.rit.edu"; mode "default"
+    bindsym Control+s exec --no-startup-id "librewolf https://starrs.csh.rit.edu"
+    bindsym Shift+Control+s exec --no-startup-id "librewolf --new-window https://starrs.csh.rit.edu"
+
+    bindsym d exec --no-startup-id "librewolf https://discourse.csh.rit.edu"; mode "default"
+    bindsym Shift+d exec --no-startup-id "librewolf --new-window https://discourse.csh.rit.edu"; mode "default"
+    bindsym Control+d exec --no-startup-id "librewolf https://discourse.csh.rit.edu"
+    bindsym Shift+Control+d exec --no-startup-id "librewolf --new-window https://discourse.csh.rit.edu"
+
+    bindsym f exec --no-startup-id "librewolf http://makea.fish"; mode "default"
+    bindsym Shift+f exec --no-startup-id "librewolf --new-window http://makea.fish"; mode "default"
+    bindsym Control+f exec --no-startup-id "librewolf http://makea.fish"
+    bindsym Shift+Control+f exec --no-startup-id "librewolf --new-window http://makea.fish"
+
+    bindsym g exec --no-startup-id "librewolf https://www.github.com"; mode "default"
+    bindsym Shift+g exec --no-startup-id "librewolf --new-window https://github.com"; mode "default"
+    bindsym Control+g exec --no-startup-id "librewolf https://www.github.com"
+    bindsym Shift+Control+g exec --no-startup-id "librewolf --new-window https://github.com"
+
+    bindsym j exec --no-startup-id "librewolf https://catjam.csh.rit.edu"; mode "default"
+    bindsym Shift+j exec --no-startup-id "librewolf --new-window https://catjam.csh.rit.edu"; mode "default"
+    bindsym Control+j exec --no-startup-id "librewolf https://catjam.csh.rit.edu"
+    bindsym Shift+Control+j exec --no-startup-id "librewolf --new-window https://catjam.csh.rit.edu"
+
+    bindsym k exec --no-startup-id "librewolf https://sso.csh.rit.edu/auth"; mode "default"
+    bindsym Shift+k exec --no-startup-id "librewolf --new-window https://sso.csh.rit.edu/auth"; mode "default"
+    bindsym Control+k exec --no-startup-id "librewolf https://sso.csh.rit.edu/auth"
+    bindsym Shift+Control+k exec --no-startup-id "librewolf --new-window https://sso.csh.rit.edu/auth"
+
+    bindsym z exec --no-startup-id "librewolf https://ondemand.rit.edu"; mode "default"
+    bindsym Shift+z exec --no-startup-id "librewolf --new-window https://ondemand.rit.edu"; mode "default"
+    bindsym Control+z exec --no-startup-id "librewolf https://ondemand.rit.edu"
+    bindsym Shift+Control+z exec --no-startup-id "librewolf --new-window https://ondemand.rit.edu"
+
+    bindsym x exec --no-startup-id "librewolf https://xkcd.com"; mode "default"
+    bindsym Shift+x exec --no-startup-id "librewolf --new-window https://xkcd.com"; mode "default"
+    bindsym Control+x exec --no-startup-id "librewolf https://xkcd.com"
+    bindsym Shift+Control+x exec --no-startup-id "librewolf --new-window https://xkcd.com"
+
+    bindsym c exec --no-startup-id "librewolf https://constitution.csh.rit.edu"; mode "default"
+    bindsym Shift+c exec --no-startup-id "librewolf --new-window https://constitution.csh.rit.edu"; mode "default"
+    bindsym Control+c exec --no-startup-id "librewolf https://constitution.csh.rit.edu"
+    bindsym Shift+Control+c exec --no-startup-id "librewolf --new-window https://constitution.csh.rit.edu"
+
+    bindsym v exec --no-startup-id "librewolf https://vote.csh.rit.edu"; mode "default"
+    bindsym Shift+v exec --no-startup-id "librewolf --new-window https://vote.csh.rit.edu"; mode "default"
+    bindsym Control+v exec --no-startup-id "librewolf https://vote.csh.rit.edu"
+    bindsym Shift+Control+v exec --no-startup-id "librewolf --new-window https://vote.csh.rit.edu"
+
+    bindsym n exec --no-startup-id "librewolf https://www.nytimes.com/crosswords"; mode "default"
+    bindsym Shift+n exec --no-startup-id "librewolf --new-window https://www.nytimes.com/crosswords"; mode "default"
+    bindsym Control+n exec --no-startup-id "librewolf https://www.nytimes.com/crosswords"
+    bindsym Shift+Control+n exec --no-startup-id "librewolf --new-window https://www.nytimes.com/crosswords"
+
+    bindsym m exec --no-startup-id "librewolf https://mycourses.rit.edu"; mode "default"
+    bindsym Shift+m exec --no-startup-id "librewolf --new-window https://mycourses.rit.edu"; mode "default"
+    bindsym Control+m exec --no-startup-id "librewolf https://mycourses.rit.edu"
+    bindsym Shift+Control+m exec --no-startup-id "librewolf --new-window https://mycourses.rit.edu"
+
+    bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 
-bindsym $mod+w mode "waterfox"
-
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/wave.png
-exec_always --no-startup-id ~/.config/i3/polybar.sh &
+exec_always --no-startup-id ~/.config/i3/lazybar.sh &
 exec_always --no-startup-id polkit-dumb-agent &
 exec_always --no-startup-id brightnessctl -q --device='tpacpi::kbd_backlight' set 1
 exec_always --no-startup-id killall dunst && /usr/bin/dunst &
@@ -277,5 +375,7 @@ exec --no-startup-id "i3-msg 'workspace 10; append_layout ~/.config/i3/workspace
 bindsym $mod+Shift+s exec --no-startup-id slack
 bindsym $mod+Shift+d exec --no-startup-id /home/jeremy/.local/share/DiscordCanary/DiscordCanary
 bindsym $mod+Shift+t exec --no-startup-id thunderbird
+
+bindsym $mod+Shift+Control+d exec --no-startup-id ssh devcade pkill X
 
 focus_on_window_activation focus

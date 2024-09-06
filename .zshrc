@@ -12,14 +12,6 @@ plugins=(
     vi-mode
 )
 
-export ZSH="$HOME/.oh-my-zsh"
-export VISUAL=nvim
-export EDITOR="$VISUAL"
-export PATH="$PATH:$HOME/.cargo/bin"
-export CARGO_NET_GIT_FETCH_WITH_CLI=true
-export GPG_TTY=$(tty)
-export TERMINAL=kitty
-
 source $ZSH/oh-my-zsh.sh
 
 alias l='eza -lagBMo --no-permissions --sort type --color-scale age --time-style "+%Y-%m-%d %T"'
@@ -38,6 +30,9 @@ alias cargon='cargo +nightly'
 alias fd='fd -u'
 alias rg='rg -uu'
 alias ncdu='ncdu --color=dark'
+alias top='bpytop'
+alias btop='bpytop'
+alias ssh='kitten ssh'
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx

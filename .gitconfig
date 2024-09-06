@@ -10,3 +10,5 @@
         path = ~/rtp/.gitconfig-csh
 [init]
 	defaultBranch = master
+[cinnabar]
+	version-check = 1718298504
