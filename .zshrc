@@ -34,6 +34,13 @@ alias top='bpytop'
 alias btop='bpytop'
 alias ssh='kitten ssh'
 
+# Advent of Code
+alias aocgo='aocd & aocprep && aocopen'
+alias aocd='aoc d -I -i ~/github/adventofrust/input/$(date +%d)'
+alias aocprep='sed -e "s/%DAY%/$(date +%d)/" ~/github/adventofrust/src/bin/template.rs > ~/github/adventofrust/src/bin/$(date +%d).rs'
+alias aocopen='cd ~/github/adventofrust/ && nvim src/bin/$(date +%d).rs'
+alias aocrun='cd ~/github/adventofrust/ && cargo run --bin $(date +%d)'
+
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
 fi
