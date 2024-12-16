@@ -1,3 +1,3 @@
-keycode 164 = XF86AudioNext NoSymbol XF86AudioNext
-keycode 226 = XF86AudioPrev NoSymbol XF86AudioPrev
-keycode 231 = XF86AudioPlay NoSymbol XF86AudioPlay
+keycode 156 = XF86AudioNext NoSymbol XF86AudioNext
+keycode 445 = XF86AudioPrev NoSymbol XF86AudioPrev
+keycode 446 = XF86AudioPlay NoSymbol XF86AudioPlay

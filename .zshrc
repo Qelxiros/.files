@@ -36,10 +36,11 @@ alias ssh='kitten ssh'
 
 # Advent of Code
 alias aocgo='aocd & aocprep && aocopen'
-alias aocd='aoc d -I -i ~/github/adventofrust/input/$(date +%d)'
-alias aocprep='sed -e "s/%DAY%/$(date +%d)/" ~/github/adventofrust/src/bin/template.rs > ~/github/adventofrust/src/bin/$(date +%d).rs'
+alias aoct='sed -e "s/%DAY%/$(date -d tomorrow +%d)/" ~/github/adventofrust/src/bin/template > ~/github/adventofrust/src/bin/$(date -d tomorrow +%d).rs && cd ~/github/adventofrust/ && nvim src/bin/$(date -d tomorrow +%d).rs'
+alias aocd='rm -rf ~/github/adventofrust/input/$(date +%d) ~/github/adventofrust/src/bin/puzzle.md && aoc d -i ~/github/adventofrust/input/$(date +%d) -p ~/github/adventofrust/src/bin/puzzle.md'
+alias aocprep='sed -e "s/%DAY%/$(date +%d)/" ~/github/adventofrust/src/bin/template > ~/github/adventofrust/src/bin/$(date +%d).rs'
 alias aocopen='cd ~/github/adventofrust/ && nvim src/bin/$(date +%d).rs'
-alias aocrun='cd ~/github/adventofrust/ && cargo run --bin $(date +%d)'
+alias aocrun='cd ~/github/adventofrust/ && cargo run --bin $(date +%d) | tee /tmp/aoc && tail -n1 /tmp/aoc | clip'
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
