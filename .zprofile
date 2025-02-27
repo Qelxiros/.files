@@ -1,0 +1,11 @@
+export ZSH="$HOME/.oh-my-zsh"
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+export PATH="$PATH:$HOME/.cargo/bin"
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
+export GPG_TTY=$(tty)
+export TERMINAL=kitty
+export GTK_THEME=Adwaita:dark
+export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
+export QT_STYLE_OVERRIDE=Adwaita-Dark
+export XDG_CONFIG_HOME="$HOME/.config"

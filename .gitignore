@@ -3,6 +3,8 @@
 !.Xmodmap
 !.xinitrc
 !.p10k.zsh
+!.zprofile
+!.profile
 !.config/
 !.config/autorandr
 !.config/autorandr/**
